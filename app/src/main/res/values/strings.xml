@@ -1,0 +1,81 @@
+<resources>
+
+    <string name="app_name">Lugares Cercanos GPS</string>
+
+    <!-- Pantalla principal -->
+    <string name="waiting_location">Esperando la ubicación…</string>
+    <string name="getting_location">Obteniendo tu ubicación GPS…</string>
+    <string name="searching_places">Buscando lugares en un radio de %1$d km…</string>
+    <string name="locate_me">Ir a mi ubicación</string>
+    <string name="you_are_here">Estás aquí</string>
+    <string name="accuracy">Precisión: ±%1$d m</string>
+    <string name="searched_address">Dirección buscada</string>
+    <string name="info_address">📍 %1$s</string>
+    <string name="info_coordinates">Lat %1$.5f, Lon %2$.5f · Radio %3$d km</string>
+    <string name="info_count">%1$s encontrados: %2$d</string>
+    <string name="info_none">No se encontraron lugares de este tipo. Prueba un radio mayor en Ajustes.</string>
+    <string name="unknown_address">(dirección no disponible)</string>
+    <string name="error_search">No se pudieron cargar los lugares. Revisa tu conexión a internet e inténtalo de nuevo.</string>
+    <string name="error_location">No se pudo obtener la ubicación. En el emulador usa ⋯ → Location → Set Location.</string>
+    <string name="no_provider">No hay ningún proveedor de ubicación disponible.</string>
+
+    <!-- Menú -->
+    <string name="menu_search">Buscar dirección</string>
+    <string name="menu_refresh">Actualizar lugares</string>
+    <string name="menu_settings">Ajustes</string>
+
+    <!-- Buscar dirección -->
+    <string name="search_title">Buscar una dirección</string>
+    <string name="search_hint">Ej: Universidad Nacional, Bogotá</string>
+    <string name="search_button">Buscar</string>
+    <string name="search_not_found">No se encontró esa dirección.</string>
+    <string name="cancel">Cancelar</string>
+
+    <!-- Permisos -->
+    <string name="permission_title">Permiso de ubicación</string>
+    <string name="permission_rationale">La app necesita tu ubicación para mostrar en el mapa los lugares de interés que hay cerca de ti.</string>
+    <string name="permission_denied">Sin permiso de ubicación. Puedes usar “Buscar dirección” desde el menú.</string>
+    <string name="permission_permanently_denied">Negaste el permiso de ubicación. Para activarlo ve a Ajustes de la app → Permisos → Ubicación.</string>
+    <string name="permission_allow">Permitir</string>
+    <string name="open_settings">Abrir ajustes</string>
+
+    <!-- Ubicación desactivada -->
+    <string name="location_off_title">Ubicación desactivada</string>
+    <string name="location_off_message">Activa la ubicación del dispositivo para encontrar lugares cercanos.</string>
+
+    <!-- Ajustes -->
+    <string name="settings_title">Ajustes</string>
+    <string name="pref_radius_title">Radio de búsqueda (km)</string>
+    <string name="pref_radius_summary">Distancia máxima a la que se buscan lugares</string>
+    <string name="pref_category_title">Tipo de lugar</string>
+    <string name="pref_labels_title">Mostrar nombres en el mapa</string>
+    <string name="pref_labels_summary">Escribe el nombre encima de cada punto</string>
+
+    <!-- Categorías -->
+    <string name="category_hospital">Hospitales y clínicas</string>
+    <string name="category_tourism">Lugares turísticos</string>
+    <string name="category_food">Restaurantes y cafés</string>
+    <string name="category_pharmacy">Farmacias</string>
+    <string name="category_education">Colegios y universidades</string>
+    <string name="category_all">Todos (salud, turismo, farmacias, educación)</string>
+
+    <string-array name="category_entries">
+        <item>@string/category_hospital</item>
+        <item>@string/category_tourism</item>
+        <item>@string/category_food</item>
+        <item>@string/category_pharmacy</item>
+        <item>@string/category_education</item>
+        <item>@string/category_all</item>
+    </string-array>
+
+    <!-- Estos valores deben coincidir con PoiCategory.key en el código -->
+    <string-array name="category_values" translatable="false">
+        <item>hospital</item>
+        <item>tourism</item>
+        <item>food</item>
+        <item>pharmacy</item>
+        <item>education</item>
+        <item>all</item>
+    </string-array>
+
+</resources>

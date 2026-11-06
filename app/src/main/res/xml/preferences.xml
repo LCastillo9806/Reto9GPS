@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla de Ajustes. Los valores se guardan solos en SharedPreferences
+     y MainActivity los lee con las mismas "key". -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Radio en kilómetros (lo que pide el reto) -->
+    <SeekBarPreference
+        app:key="radius_km"
+        app:title="@string/pref_radius_title"
+        app:summary="@string/pref_radius_summary"
+        app:min="1"
+        android:max="20"
+        app:defaultValue="2"
+        app:showSeekBarValue="true"
+        app:iconSpaceReserved="false"
+        />
+
+    <!-- Qué tipo de lugares buscar -->
+    <ListPreference
+        app:key="poi_category"
+        app:title="@string/pref_category_title"
+        app:entries="@array/category_entries"
+        app:entryValues="@array/category_values"
+        app:defaultValue="hospital"
+        app:useSimpleSummaryProvider="true"
+        app:iconSpaceReserved="false" />
+
+    <!-- Mostrar el nombre siempre visible encima del marcador -->
+    <SwitchPreferenceCompat
+        app:key="show_labels"
+        app:title="@string/pref_labels_title"
+        app:summary="@string/pref_labels_summary"
+        app:defaultValue="true"
+        app:iconSpaceReserved="false" />
+
+</PreferenceScreen>

@@ -1,0 +1,5 @@
+<resources>
+    <!-- Tema base: Material 3, claro/oscuro automático, sin ActionBar
+         (usamos nuestra propia MaterialToolbar en cada pantalla). -->
+    <style name="Theme.Reto9GPS" parent="Theme.Material3.DayNight.NoActionBar" />
+</resources>
