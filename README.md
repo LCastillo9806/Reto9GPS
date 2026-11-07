@@ -2,10 +2,6 @@
 
 App Android (Kotlin) que obtiene la ubicación del dispositivo y muestra en un mapa de **OpenStreetMap** los lugares de interés cercanos (hospitales, sitios turísticos, restaurantes, farmacias, colegios…) dentro de un **radio en km configurable** desde las preferencias.
 
-## 🎥 Video de demostración
-
-> **Enlace al video:** _(pegar aquí el enlace de YouTube o Drive)_
-
 ## Funcionalidades
 
 - **Permisos de ubicación en tiempo de ejecución** (`ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION`), con un diálogo que explica por qué se necesitan.
