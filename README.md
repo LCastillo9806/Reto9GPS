@@ -16,6 +16,8 @@ App Android (Kotlin) que obtiene la ubicación del dispositivo y muestra en un m
 
 ## Capturas de pantalla
 
+Tomadas en un Samsung Galaxy A03s (Android 13) con la ubicación GPS real.
+
 | Permiso de ubicación | Hospitales en 2 km | Ajustes |
 |:---:|:---:|:---:|
 | <img src="capturas/01_permiso.png" width="240"> | <img src="capturas/02_mapa_lugares.png" width="240"> | <img src="capturas/03_ajustes.png" width="240"> |
