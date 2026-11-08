@@ -6,6 +6,7 @@ import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
 import org.osmdroid.util.GeoPoint
+import android.util.Log
 import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
@@ -82,9 +83,10 @@ enum class PoiCategory(val key: String, val labelRes: Int, val filters: List<Str
 class OsmRepository {
 
     companion object {
-        // Si el primer servidor de Overpass está ocupado, se prueba el segundo
+        // Si un servidor de Overpass está ocupado o caído, se prueba el siguiente
         private val OVERPASS_URLS = listOf(
             "https://overpass-api.de/api/interpreter",
+            "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
             "https://overpass.private.coffee/api/interpreter"
         )
         private const val NOMINATIM_URL = "https://nominatim.openstreetmap.org"
@@ -116,6 +118,7 @@ class OsmRepository {
                 val json = httpPost(url, body)
                 return@withContext parseOverpass(json, lat, lon, radiusMeters)
             } catch (e: IOException) {
+                Log.w("OsmRepository", "Overpass falló en $url: ${e.message}")
                 lastError = e  // probamos con el siguiente servidor
             }
         }
